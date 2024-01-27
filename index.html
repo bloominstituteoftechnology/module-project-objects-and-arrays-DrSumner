@@ -23,7 +23,8 @@
     // 🧠 Example of usage:
     // buildPeter() // should return { firstName: "Peter", lastName: "Pan", age: 12 }
     function buildPeter() {
-
+        let peter = {firstName: "Peter", lastName: "Pan", age: 12
+      }; return peter
     }
 
     // 👉 CHALLENGE 2
@@ -31,7 +32,8 @@
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
-
+        let user = {firstName, lastName, age
+        };  return user
     }
 
     // 👉 CHALLENGE 3
@@ -42,7 +44,13 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
+    function deletePrice({item, price}) {
+      let object1 = {item, price};
+        if (object1.price === undefined){
+          object1.priceless = true
+        }
+        delete object1.price;
+        return object1
 
     }
 
@@ -52,9 +60,16 @@
     // 🧠 Examples of usage:
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
-    function evenList(arr) {
-
-    }
+    function evenList([]) {
+      let list = []
+      let answer
+      if (list.length % 2 === 0){
+        answer = true
+      } else{
+        answer = false
+      }
+      return answer
+    } 
 
     // 👉 CHALLENGE 5
     // 🧠 The function firstOrLast takes an array as the first argument, and a Boolean as the second.
