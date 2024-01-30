@@ -60,16 +60,22 @@
     // 🧠 Examples of usage:
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
-    function evenList([]) {
-      let list = []
+    function evenList(arr) {
+      let isEven = arr.length % 2 === 0
+      let isOdd = arr.length % 2 !== 0
       let answer
-      if (list.length % 2 === 0){
+      if (isEven){ 
         answer = true
-      } else{
-        answer = false
-      }
-      return answer
+      } else if (isOdd) {
+        answer = false}
+        return answer
     } 
+    
+    // testing something//
+    // function testes(arr, b) {
+    //   return b
+    // }
+    // //
 
     // 👉 CHALLENGE 5
     // 🧠 The function firstOrLast takes an array as the first argument, and a Boolean as the second.
@@ -77,9 +83,23 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
+    function firstOrLast(arr, b) {
+        let isTrue = b === true
+        let isFalse = b === false
+        let solve 
+        if (isTrue){
+          solve = arr[0]
+        } else if (isFalse){
+          solve = arr[arr.length -1]
+        } return solve
 
     }
+
+    // function testes2(arr, b) {
+    //   console.log(arr)
+    //   arr.push(b)
+    //   console.log(arr)
+    // }
 
     // 👉 CHALLENGE 6
     // 🧠 The function pushElement takes an array as the first argument, and any value we wish as the second.
@@ -87,9 +107,21 @@
     // 🧠 Examples of usage:
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-    function pushElement() {
-
+    function pushElement(arr, b) {
+   [arr.push(b)]
+   return arr
+      
     }
+
+    // function testes3(a) {
+    //   fox= a.split('')
+    //   console.log(fox)
+    //   for (let i in fox)
+    //   console.log(fox[i])
+    // if (i === "r"){
+
+    // }
+    // }
 
     // 👉 CHALLENGE 7
     // 🧠 The function stripX takes a string as its argument.
@@ -103,9 +135,29 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
-    function stripX() {
-
+    function stripX(a) {
+      let fool= a.split('')
+      let smart= []
+      for (let i in fool)
+      if (fool[i] !== "x"){
+        smart.push(fool[i])
+      } 
+      smart = smart.join("")
+      return smart
+      
     }
+
+    // function testes4(a,b){
+    //   let fronts = a.split('')
+    //   let back = []
+    //   for (let i in fronts)
+    //   if (fronts[i] !== b){
+    //     back.push(fronts[i])
+    //   } console.log(fronts)
+    //   console.log(b)
+    //   console.log(back)
+      
+    // }
 
     // 👉 CHALLENGE 8
     // 🧠 The function stripChar takes a string as its first argument and a character as its second argument.
@@ -116,9 +168,22 @@
     // ❗ Important Notes:
     // 🧠 Try to solve this problem without looking at how you solved the previous one.
     // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-    function stripChar() {
+    function stripChar(a, b) {
+       front = a.split('')
+       back= []
+       for (let i in front)
+       if (front[i] !== b){
+        back.push(front[i])
+       } 
+       back = back.join('') 
+       return back
 
     }
+
+    // function testes5(a,b){
+    //   prop = {a:b}
+    //   console.log(prop)
+    // }
 
     // 👉 CHALLENGE 9
     // 🧠 The function getProps takes an object as its argument.
@@ -129,8 +194,14 @@
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps() {
-
+    function getProps(a) {
+      let object = a
+      let arri = []
+      // console.log(object)
+      for ( let property in object)
+      if(property !== "age" && property !== "married" ){
+        arri.push(property)
+      } return arri
     }
 
     // 🧪 TESTS, do not work below this line
